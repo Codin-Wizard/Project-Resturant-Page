@@ -1,13 +1,21 @@
-function loadContent() {
+function clearContent() {
+    const content = document.getElementById('content');
+    content.innerHTML = '';
+}
+
+
+function loadFrontPageContent() {
     const content = document.getElementById('content');
 
     const frontPageBakgrunnsBilde = document.createElement('div');
-    frontPageBakgrunnsBilde.id = 'bestillBord';
 
-    const bestillBord = document.createElement('button');
-    bestillBord.textContent = 'BESTILL BORD';
+    frontPageBakgrunnsBilde.id = 'frontPageBilde';
 
-    frontPageBakgrunnsBilde.appendChild(bestillBord);
+    const bestillBordKnapp = document.createElement('button');
+    bestillBordKnapp.textContent = 'BESTILL BORD';
+    bestillBordKnapp.className = 'bestillBordKnapp';
+
+    frontPageBakgrunnsBilde.appendChild(bestillBordKnapp);
 
     const omOss = document.createElement('div');
     omOss.id = 'omOss';
@@ -24,7 +32,14 @@ function loadContent() {
     content.append(frontPageBakgrunnsBilde, omOss);
 }
 
-// Kall funksjonen når vinduet er lastet
-window.addEventListener('load', loadContent);
+function loadBestillBord() {
+    const content = document.getElementById('content');
 
-export { loadContent };
+    const p = document.createElement('p');
+    p.className = 'tekst';
+    p.textContent = 'Hvis du har spørsmål eller ikke finner ledig bord i onlinebookingen, send mail på post@restaurant-bravo.no eller ring 92070337 (telefon besvares fra 10.00 onsdag-lørdag).'
+
+    content.append(p)
+}
+
+export { clearContent, loadFrontPageContent, loadBestillBord};

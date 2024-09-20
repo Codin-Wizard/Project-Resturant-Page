@@ -7,22 +7,25 @@
 :root{
     --button-black: #3c3c3c;
 }
-
+body{
+    height: 100vh;
+}
 /*Main content*/
 
 #content {
     display: grid;
-    grid-template-rows:1fr 1fr;
+    grid-auto-rows: minmax(100px, 400px);
+    height: 100%;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
 }
 
-#bestillBord{
+#frontPageBilde{
     grid-row: 1;
     margin: 0 auto;
 }
-#bestillBord button{
+#frontPageBilde button{
     cursor: pointer;
     background-color: var(--button-black);
     padding: 20px 30px;
@@ -48,10 +51,11 @@ nav{
 
 nav img{
 width: 150px;
+cursor: pointer;
 }
 
 nav button{
-
+    cursor: pointer;
 }
 
 
@@ -60,5 +64,6 @@ nav button{
 /*Bunn bar*/
 
 footer{
+    width: 100%;
     border-top: 1px solid black
 }
