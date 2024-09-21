@@ -2,7 +2,15 @@ function clearContent() {
     const content = document.getElementById('content');
     content.innerHTML = '';
 }
-
+//En funksjon for å fjerne klassen "active" fra alle knappene og legge den på den aktive knappen
+function setActiveButton(knapp) {
+    // Fjern "active" fra alle knapper
+    document.querySelectorAll('.nav-knapp').forEach(button => {
+        button.classList.remove('active');
+    });
+    // Legg til "active" på den klikkede knappen
+    knapp.classList.add('active');
+}
 
 function loadFrontPageContent() {
     const content = document.getElementById('content');
@@ -30,6 +38,12 @@ function loadFrontPageContent() {
     omOss.append(vaarLocationBilde, omOssTekst);
 
     content.append(frontPageBakgrunnsBilde, omOss);
+
+    bestillBordKnapp.addEventListener('click', () => {
+        clearContent();
+        loadBestillBord();
+        setActiveButton(bestillBordKnapp); // Sett denne knappen som aktiv
+    });
 }
 
 function loadBestillBord() {
@@ -71,4 +85,4 @@ function loadMeny() {
 
     content.append(p)
 }
-export { clearContent, loadFrontPageContent, loadBestillBord, loadTider, loadGavekort, loadMeny};
+export { clearContent, setActiveButton, loadFrontPageContent, loadBestillBord, loadTider, loadGavekort, loadMeny};

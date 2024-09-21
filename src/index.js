@@ -1,21 +1,11 @@
 import "./style.css"
 
-import {clearContent, loadFrontPageContent, loadBestillBord } from "./main_content"
+import {clearContent, setActiveButton, loadFrontPageContent, loadBestillBord, loadTider, loadGavekort, loadMeny } from "./main_content"
 
 loadFrontPageContent();
 
-//En funksjon for å fjerne klassen "active" fra alle knappene og legge den på den aktive knappen
-function setActiveButton(knapp) {
-        // Fjern "active" fra alle knapper
-        document.querySelectorAll('.nav-knapp').forEach(button => {
-            button.classList.remove('active');
-        });
-        // Legg til "active" på den klikkede knappen
-        knapp.classList.add('active');
-}
-
 const index = document.querySelector('.home');
-const bestillBordKnapp = document.querySelector('.bestillBordKnapp');
+const bestillBordKnapp = document.querySelectorAll('.bestillBordKnapp');
 const tiderKnapp = document.querySelector('.tiderKnapp');
 const gavekortKnapp = document.querySelector('.gavekortKnapp');
 const menyKnapp = document.querySelector('.menyKnapp');
@@ -32,7 +22,7 @@ bestillBordKnapp.forEach(knapp => {
     knapp.addEventListener('click', () => {
         clearContent();
         loadBestillBord();
-        setActiveButton(bestillBordKnapp);
+        setActiveButton(knapp);
     });
 });
 

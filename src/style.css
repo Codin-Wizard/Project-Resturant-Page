@@ -51,11 +51,13 @@ nav{
 
 nav img{
 width: 150px;
-cursor: pointer;
 }
 
-nav button{
+.nav-knapp{
     cursor: pointer;
+}
+.nav-knapp.active{
+    color: gold;
 }
 
 
