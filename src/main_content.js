@@ -42,4 +42,33 @@ function loadBestillBord() {
     content.append(p)
 }
 
-export { clearContent, loadFrontPageContent, loadBestillBord};
+function loadTider() {
+    const content = document.getElementById('content');
+
+    const p = document.createElement('p');
+    p.className = 'tekst';
+    p.textContent = 'Hvis du har spørsmål eller ikke finner ledig bord i onlinebookingen, send mail på post@restaurant-bravo.no eller ring 92070337 (telefon besvares fra 10.00 onsdag-lørdag).'
+
+    content.append(p)
+}
+
+function loadGavekort(){
+    const content = document.getElementById('content');
+
+    const p = document.createElement('p');
+    p.className = 'tekst';
+    p.textContent = 'Hvis du har spørsmål eller ikke finner ledig bord i onlinebookingen, send mail på post@restaurant-bravo.no eller ring 92070337 (telefon besvares fra 10.00 onsdag-lørdag).'
+
+    content.append(p)
+}
+
+function loadMeny() {
+    const content = document.getElementById('content');
+
+    const p = document.createElement('p');
+    p.className = 'tekst';
+    p.textContent = 'Hvis du har spørsmål eller ikke finner ledig bord i onlinebookingen, send mail på post@restaurant-bravo.no eller ring 92070337 (telefon besvares fra 10.00 onsdag-lørdag).'
+
+    content.append(p)
+}
+export { clearContent, loadFrontPageContent, loadBestillBord, loadTider, loadGavekort, loadMeny};
