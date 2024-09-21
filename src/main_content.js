@@ -21,7 +21,7 @@ function loadFrontPageContent() {
 
     const bestillBordKnapp = document.createElement('button');
     bestillBordKnapp.textContent = 'BESTILL BORD';
-    bestillBordKnapp.className = 'bestillBordKnapp';
+    bestillBordKnapp.className = 'bestillBordKnapp1';
 
     frontPageBakgrunnsBilde.appendChild(bestillBordKnapp);
 
@@ -39,10 +39,11 @@ function loadFrontPageContent() {
 
     content.append(frontPageBakgrunnsBilde, omOss);
 
+    const bestillBordNav = document.querySelector('.bestillBordKnapp')
     bestillBordKnapp.addEventListener('click', () => {
         clearContent();
         loadBestillBord();
-        setActiveButton(bestillBordKnapp); // Sett denne knappen som aktiv
+        setActiveButton(bestillBordNav); // Sett denne knappen som aktiv
     });
 }
 
