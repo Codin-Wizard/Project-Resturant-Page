@@ -23,13 +23,21 @@ body{
 
 #frontPageBilde{
     grid-row: 1;
-    margin: 0 auto;
+    background-image: url('./Images/homescreen.jpg');
+    background-size: cover; /* or contain */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #frontPageBilde button{
     cursor: pointer;
     background-color: var(--button-black);
     padding: 20px 30px;
     color: white;
+    margin:  0 auto;
 }
 #omOss{
     grid-row: 2;

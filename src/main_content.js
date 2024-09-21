@@ -11,6 +11,7 @@ function setActiveButton(knapp) {
     // Legg til "active" på den klikkede knappen
     knapp.classList.add('active');
 }
+import bravoLocationImage from './Images/bravo-location.png'; // Adjust the path to where your image is
 
 function loadFrontPageContent() {
     const content = document.getElementById('content');
@@ -29,7 +30,7 @@ function loadFrontPageContent() {
     omOss.id = 'omOss';
 
     const vaarLocationBilde = document.createElement('img');
-    vaarLocationBilde.src = './Images/bravo-location.png';
+    vaarLocationBilde.src = bravoLocationImage;
     vaarLocationBilde.alt = 'Google Maps';
 
     const omOssTekst = document.createElement('div');
